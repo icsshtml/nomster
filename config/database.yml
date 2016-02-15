@@ -20,14 +20,13 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  username: postgres 
+  password: password
+  host: localhost
 
 development:
   <<: *default
   database: nomster_development
-  username: postgres 
-  password: password
-  host: localhost
-  
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -62,9 +61,6 @@ development:
 test:
   <<: *default
   database: nomster_test
-  username: postgres 
-  password: password
-  host: localhost
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -91,6 +87,4 @@ production:
   database: nomster_production
   username: nomster
   password: <%= ENV['NOMSTER_DATABASE_PASSWORD'] %>
-  username: postgres 
-  password: password
-  host: localhost
+
