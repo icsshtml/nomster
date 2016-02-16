@@ -1,7 +1,6 @@
 body{
 	background: url('/assets/gray_jean.png');
 	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-
 }
 
 .navbar.navbar-inverse{
@@ -9,6 +8,12 @@ body{
 	border-radius: 0;
 	box-shadow: 0px 1px 3px #2a2a2a;
 }
+.navbar-inverse .navbar-brand{
+	color: #19AEE0;
+	font-family: 'bitstream_vera_sansoblique';
+	font-size: 26px;
+}
+
 .booyah-box{
   -webkit-box-shadow:1px 1px 2px 0 #d0d0d0;
   -moz-box-shadow:1px 1px 2px 0 #d0d0d0;
