@@ -4,5 +4,24 @@
 		<i><%= place.address %></i><br /><br />
 		<p><%= place.description %></p><br />
 	</div>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 
+	<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @places %>
+    </div>
+    <%= will_paginate @places, :container => false %>
+  </div>
 <% end %>
