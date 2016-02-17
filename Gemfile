@@ -51,5 +51,6 @@ gem 'sprockets', '2.11.0'
 gem 'will_paginate', '~> 3.0.6'
 gem 'simple_form'
 gem 'will_paginate-bootstrap', '~> 1.0.0'
+gem 'devise', '>= 3.2.4'
 
 
