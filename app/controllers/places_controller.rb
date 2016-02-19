@@ -29,7 +29,7 @@ class PlacesController < ApplicationController
 		redirect_to root_path
 	end
 
-	def destory
+	def destoy
 		@place = Place.find(params[:id])
 		@place.destory
 		redirect_to root_path
