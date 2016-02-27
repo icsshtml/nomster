@@ -48,7 +48,7 @@ html, body {
         height: 450px;
         width: 100%;
       }
-      
+
 .clear{
   clear: both;
 }
@@ -70,4 +70,14 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+
+.pull-right{
+  position: relative;
+  left: 105px;
+}
+
+.pull-left{
+  position: relative;
+  right: 105px;
 }
