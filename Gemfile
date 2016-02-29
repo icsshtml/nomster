@@ -56,5 +56,7 @@ gem "geocoder"
 gem "figaro", ">= 1.0.0"
 gem "turbolinks"
 gem "carrierwave"
+gem "fog"
+
 
 
