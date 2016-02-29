@@ -116,6 +116,7 @@
 <!-- uploading photo -->
 <% @place.photos.each do |photo| %>
   <%= image_tag photo.picture %>
+  <%= photo.caption %>
 <% end %>
 
 </div>
