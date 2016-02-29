@@ -27,6 +27,7 @@
     <div id="map"></div>
   <% end %>
   <br />
+
 	<div class="pull-right">
 		<% if current_user && current_user ==@place.user %>
 		<%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
@@ -34,6 +35,9 @@
 	<%= link_to 'Destory', place_path(@place), method: :delete, data:{confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
 	<% end %>
 	</div>
+</div>
+
+<div class="booyah-box col-xs-10 col-xs-offset-1">
 
 <div class="clear"></div>
 
@@ -45,22 +49,21 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add a picture</h4>
       </div>
-
         <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
           <div class="modal-body">
           <%= f.input :picture %>
           <%= f.input :caption %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">CloseBBB</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
          <%= f.submit "Upload Now", class: 'btn btn-primary' %>
       </div>
       <% end %>
     </div>
   </div>
 </div>
-<div class="clear"></div>
 
+<!-- Button trigger modal -->
 <div class="col-xs-10 col-xs-offset-1">
   <h1 class="pull-left">Photos</h1>
   <!-- Button trigger modal -->
@@ -69,6 +72,20 @@
   </button>
 </div>
 
+<div class="clear"></div> 
+
+<!-- uploading photo -->
+<% @place.photos.each do |photo| %>
+  <div class="col-xs-12">
+    <blockquote>
+        <%= image_tag photo.picture, :class => 'img-rounded'%><br /><br />
+        <%= photo.caption %>
+    </blockquote>
+  </div>
+<% end %> 
+</div>
+
+<div class="booyah-box col-xs-10 col-xs-offset-1">
 <!-- Modal for comments -->
 <div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -113,11 +130,5 @@
     </div>
   <% end %>
 
-<!-- uploading photo -->
-<% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture %>
-  <%= photo.caption %>
-<% end %>
-
+<div class="clear"></div>
 </div>
-
